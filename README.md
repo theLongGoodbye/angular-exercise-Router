@@ -35,4 +35,7 @@ imports: [
   ],
 ```
 
+***
+在 heroes 目录下创建一个带路由的 HeroesModule，并把它注册进 AppModule 中
+ng generate module heroes/heroes --module app --flat --routing
 
