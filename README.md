@@ -38,4 +38,6 @@ imports: [
 ***
 在 heroes 目录下创建一个带路由的 HeroesModule，并把它注册进 AppModule 中
 ng generate module heroes/heroes --module app --flat --routing
-
+***
+如果是在跟组件直接使用子组件（写了选择器标签），则要在特性模块中 导出 这个组件
+如果是路由（通过 a 标签路由到某个组件），则不用在特性模块中导出
