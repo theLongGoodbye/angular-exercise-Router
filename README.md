@@ -41,3 +41,5 @@ ng generate module heroes/heroes --module app --flat --routing
 ***
 如果是在跟组件直接使用子组件（写了选择器标签），则要在特性模块中 导出 这个组件
 如果是路由（通过 a 标签路由到某个组件），则不用在特性模块中导出
+***
+只在根模块 AppRoutingModule 中调用 RouterModule.forRoot（如果在 AppModule 中注册应用的顶级路由，那就在 AppModule 中调用）。 在其它模块中，你就必须调用RouterModule.forChild方法来注册附属路由。
