@@ -43,3 +43,18 @@ ng generate module heroes/heroes --module app --flat --routing
 如果是路由（通过 a 标签路由到某个组件），则不用在特性模块中导出
 ***
 只在根模块 AppRoutingModule 中调用 RouterModule.forRoot（如果在 AppModule 中注册应用的顶级路由，那就在 AppModule 中调用）。 在其它模块中，你就必须调用RouterModule.forChild方法来注册附属路由。
+***
+#### 通过 url 传递和获取数据（heroes文件夹）
+0. 路径设置 {path: 'hero/:id', component: HeroDetailComponent}
+1. 在模板中放置路由标签 <a [routerLink]="['/hero', hero.id]">
+2. 引入 ActivatedRoute 模块，调用下面的方法获取 url 里面的值
+```
+this.route.paramMap.pipe(
+        // 你可能想使用 RxJS 的 map 操作符。 但 HeroService 返回的是一个 Observable<Hero>
+        // 所以你要改用 switchMap 操作符来打平这个 Observable。
+        switchMap((params: ParamMap) =>
+          this.service.getHero(params.get('id')))
+      )
+```
+3. 引入 Router 模块，使用 this.router.navigate(['/heroes',{id: heroId, foo: 'foo'}]) 导航到相应地址，并传参
+4. 同样使用 this.route.paramMap.pipe() 方法来获取参数
