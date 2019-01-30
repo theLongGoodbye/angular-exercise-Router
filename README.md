@@ -56,5 +56,5 @@ this.route.paramMap.pipe(
           this.service.getHero(params.get('id')))
       )
 ```
-3. 引入 Router 模块，使用 this.router.navigate(['/heroes',{id: heroId, foo: 'foo'}]) 导航到相应地址，并传参
+3. 引入 Router 模块，使用 this.router.navigate(['/heroes',{id: heroId, foo: 'foo'}]) 导航到相应地址，并传参（这也是传多个参的方法）
 4. 同样使用 this.route.paramMap.pipe() 方法来获取参数
