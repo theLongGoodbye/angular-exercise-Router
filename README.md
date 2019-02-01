@@ -58,3 +58,5 @@ this.route.paramMap.pipe(
 ```
 3. 引入 Router 模块，使用 this.router.navigate(['/heroes',{id: heroId, foo: 'foo'}]) 导航到相应地址，并传参（这也是传多个参的方法）
 4. 同样使用 this.route.paramMap.pipe() 方法来获取参数
+***
+当调用路由器的 navigateByUrl 时，总是要指定完整的绝对路径。
