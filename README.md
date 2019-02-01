@@ -63,8 +63,7 @@ this.route.paramMap.pipe(
 
 ***
 #### 多重路由/命名路由-compose-message文件夹
-***
-http://localhost:4200/heroes(popup:compose)
+http://localhost:4200/heroes(popup:compose) <br/>
 1.crisis-center 是主导航。
 
 2.圆括号包裹的部分是第二路由。
