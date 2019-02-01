@@ -69,3 +69,10 @@ http://localhost:4200/heroes(popup:compose) <br/>
 2.圆括号包裹的部分是第二路由。
 
 3.第二路由包括一个出口名称（popup）、一个冒号分隔符和第二路由的路径（compose）。
+***
+#### 总结特性模块的配置步骤
+1.生成带 routing 模块的特性模块  ng g m XX --routing
+
+2.在特性模块下生成组件，并在 routing 模块中配置 routes
+
+3.将特性模块放入 app.module 的 imports 数组中，在定级模板中放置导航 a 标签以及路由出口 router-outlet
