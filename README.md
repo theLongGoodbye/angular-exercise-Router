@@ -60,3 +60,7 @@ this.route.paramMap.pipe(
 4. 同样使用 this.route.paramMap.pipe() 方法来获取参数
 ***
 当调用路由器的 navigateByUrl 时，总是要指定完整的绝对路径。
+
+***
+#### 多重路由/命名路由-compose-message文件夹
+
