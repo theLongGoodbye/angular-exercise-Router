@@ -76,3 +76,10 @@ http://localhost:4200/heroes(popup:compose) <br/>
 2.在特性模块下生成组件，并在 routing 模块中配置 routes
 
 3.将特性模块放入 app.module 的 imports 数组中，在定级模板中放置导航 a 标签以及路由出口 router-outlet
+***
+#### map 操作符的用法（在一个由对象组成的数组里面，找出对应 key 的那个对象）
+getCrisis(id: string | number) {
+    return this.getCrises().pipe(
+      map(crises => crises.find(crisis => crisis.id === +id))
+    )
+  }
